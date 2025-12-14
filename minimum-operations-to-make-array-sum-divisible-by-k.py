@@ -1,3 +1,5 @@
+# Link: https://leetcode.com/problems/minimum-operations-to-make-array-sum-divisible-by-k
+
 def minOperations(nums, k):
     """
     :type nums: List[int]
