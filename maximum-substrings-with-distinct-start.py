@@ -1,3 +1,5 @@
+# Link:https://leetcode.com/problems/maximum-substrings-with-distinct-start/
+
 def maxDistinct(s: str):
     """
     :type s: str
