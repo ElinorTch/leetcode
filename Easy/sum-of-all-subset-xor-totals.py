@@ -5,19 +5,13 @@ def subsetXORSum(nums):
     :type nums: List[int]
     :rtype: int
     """
-    result = []
-    XOR = 0
-
-    def backtrack(start, path):
-        result.append(list(path))        
-        
-        for i in range(start, len(nums)):
-            path.append(nums[i])
-            backtrack(i + 1, path)
-            path.pop()
-    
-    backtrack(0, [])
-    return result
+    result = [0] 
+    def backtrack(nums,path,index,xor_sum):
+        result[0] += xor_sum
+        for i in range(index,len(nums)):
+            backtrack(nums,path,i+1,xor_sum^nums[i])
+    backtrack(nums,[],0,0)
+    return result[0]
 
 if __name__ == "__main__":
-    print(subsetXORSum([5, 1, 6]))
+    print(subsetXORSum([3,4,5,6,7,8]))
